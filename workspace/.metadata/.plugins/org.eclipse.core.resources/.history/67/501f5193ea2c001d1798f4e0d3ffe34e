@@ -1,0 +1,8 @@
+package status;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet("/CalcApplication")
+public class CalcApplication {
+
+}
