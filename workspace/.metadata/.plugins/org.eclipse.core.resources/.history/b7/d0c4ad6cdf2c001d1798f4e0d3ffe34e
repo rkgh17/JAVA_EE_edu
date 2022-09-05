@@ -1,0 +1,6 @@
+package pack.human;
+
+@WebServlet("/Calc-Post")
+public class CalcPostTest {
+
+}

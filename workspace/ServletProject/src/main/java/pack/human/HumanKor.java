@@ -16,6 +16,7 @@ public class HumanKor extends HttpServlet {
 		
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		// response는 client(웹브라우저)로 보낼때 사용하는 객체
 		// 한글이 사용되는 문자인코딩으로 처리하여 보내면 됨.
 		// UTF-8 인코딩 방식은 한글을 지원함
