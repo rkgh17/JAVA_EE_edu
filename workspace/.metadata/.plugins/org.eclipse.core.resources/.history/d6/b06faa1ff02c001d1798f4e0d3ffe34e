@@ -19,7 +19,7 @@ public class CalcSession extends HttpServlet{
 		request.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 		
-		HttpSession sess = request.getSession();
+		HttpSession app = request.getSession();
 		// Session영역을 만듬. 세셜별 사용자 영역 다름
 		
 		int result = 0;
@@ -27,19 +27,19 @@ public class CalcSession extends HttpServlet{
 		String operator = request.getParameter("operator");
 		
 		if(operator.equals("+") || operator.equals("-")) {
-			sess.setAttribute("x", strValue);
-			sess.setAttribute("oper", operator);
+			app.setAttribute("x", strValue);
+			app.setAttribute("oper", operator);
 			
 		}else if(operator.equals("=")){
 			int intValue = Integer.parseInt(strValue);
-			String strX = (String) sess.getAttribute("x");
+			String strX = (String) app.getAttribute("x");
 			System.out.println("strX : "+strX);
-			System.out.println("oper : "+sess.getAttribute("oper"));
+			System.out.println("oper : "+app.getAttribute("oper"));
 			
-			if(sess.getAttribute("oper").equals("+")) {
+			if(app.getAttribute("oper").equals("+")) {
 				result = Integer.parseInt(strX) + intValue;
 				
-			}else if(sess.getAttribute("oper").equals("-")) {
+			}else if(app.getAttribute("oper").equals("-")) {
 				result = Integer.parseInt(strX) - intValue;
 			}
 			
