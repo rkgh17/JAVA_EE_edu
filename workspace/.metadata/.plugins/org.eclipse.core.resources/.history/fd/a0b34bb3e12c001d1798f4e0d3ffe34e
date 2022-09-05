@@ -1,0 +1,5 @@
+package pack.calc;
+
+public class Calculator {
+
+}

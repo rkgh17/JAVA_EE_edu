@@ -1,0 +1,6 @@
+package pack.calc;
+
+@WebServlet("/Calculator")
+public class Calculator {
+
+}
